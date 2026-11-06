@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="profile">
+        <h1 id="full-name"></h1>
+        <p>First Name: <span id="first-name"></span></p>
+        <p>Last Name: <span id="last-name"></span></p>
+        <p>Short Bio: <span id="short-bio"></span></p>
+        <p>Contains "coding": <span id="contains-word"></span></p>
+        <p>Starts with A: <span id="starts-with"></span></p>
+        <p>Ends with a period: <span id="ends-with"></span></p>
+    </div>
+    
+  <script>
+    const fullname = "Arif Hasan";
+    const Bio = "I am a software developer with a passion for coding and problem-solving.";
+    const nameparts = fullname.split(" ");
+
+    const firstName = nameparts[0];
+    const lastName = nameparts[1];
+
+    const shortBio = Bio.slice(0, 50) + "...";
+    const containsWord = Bio.includes("coding");
+    const startsWithA = fullname.startsWith("A");
+    const endsWithPeriod = Bio.endsWith(".");
+
+    document.getElementById("full-name").textContent = fullname;
+    document.getElementById("first-name").textContent = firstName;
+    document.getElementById("last-name").textContent = lastName;
+    document.getElementById("short-bio").textContent = shortBio;
+    document.getElementById("contains-word").textContent = containsWord;
+    document.getElementById("starts-with").textContent = startsWithA;
+    document.getElementById("ends-with").textContent = endsWithPeriod;
+  </script>  
+</body>
+</html>
